@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "python" #docker agent should have label python in jenkins with a docker image containing java and python3
+        label "python" //docker agent should have label python in jenkins with a docker image containing java and python3
     }
     stages{
         stage("Stage 1") {
