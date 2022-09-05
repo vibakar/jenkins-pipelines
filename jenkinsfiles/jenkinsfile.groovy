@@ -1,3 +1,7 @@
+library identifier: 'jenkins-libraries@master', retriever: modernSCM(
+[$class: 'GitSCMSource',
+remote: 'https://github.com/vibakar/jenkins-libraries.git'])
+
 pipeline {
     agent {
         label "python" //docker agent should have label python in jenkins with a docker image containing java and python3
