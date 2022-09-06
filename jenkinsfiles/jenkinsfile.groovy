@@ -11,16 +11,17 @@ pipeline {
         password(name: 'GIT_TOKEN', defaultValue: '', description: 'Github access token')
     }
     environment {
-        GIT_TOKEN = params.GIT_TOKEN
         GIT_ORG = "vibakarorg"
         GIT_REPO = "python-repo"
         GIT_REPO_PRIVACY_SETTING = "Y"
     }
     stages{
-        stage("Check Python Version") {
+        stage("Init") {
             steps {
-                sh "python3 --version"
-                sh "ls -lrt"
+                script {
+                    env.GIT_TOKEN = "${params.GIT_TOKEN}"
+                    sh "python3 --version"
+                }
             }
         }
 
