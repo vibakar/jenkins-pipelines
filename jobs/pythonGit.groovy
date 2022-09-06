@@ -15,7 +15,7 @@ pipelineJob("python-git") {
                     branch("master")
                 }
             }
-            scriptPath("jenkinsfiles/python-git.groovy")
+            scriptPath("jenkinsfiles/pythonGit.groovy")
         }
     }
 }
