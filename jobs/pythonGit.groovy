@@ -6,7 +6,7 @@ pipelineJob("python-git") {
     }
 
     definition {
-        cpsscm {
+        cpsScm {
             scm {
                 git {
                     remote {
